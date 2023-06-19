@@ -1,6 +1,5 @@
 package com.example.webapp.resource;
 
-import jakarta.inject.Inject;
 import jakarta.ws.rs.HeaderParam;
 
 public class AdditionalHeader {
@@ -14,7 +13,6 @@ public class AdditionalHeader {
 
     private String additionalHeader;
 
-    @Inject
     public AdditionalHeader(@HeaderParam("BeanParam-Constructor-Header") final String constructorHeader) {
         this.constructorHeader = constructorHeader;
     }
