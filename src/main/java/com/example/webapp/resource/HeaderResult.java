@@ -42,7 +42,7 @@ public class HeaderResult {
         return resourceAdditionalHeader;
     }
 
-    public void setResourceAdditionalHeader(String resourceAdditionalHeader) {
+    public void setResourceAdditionalHeader(final String resourceAdditionalHeader) {
         this.resourceAdditionalHeader = resourceAdditionalHeader;
     }
 
@@ -74,7 +74,7 @@ public class HeaderResult {
         return beanParamAdditionalHeader;
     }
 
-    public void setBeanParamAdditionalHeader(String beanParamAdditionalHeader) {
+    public void setBeanParamAdditionalHeader(final String beanParamAdditionalHeader) {
         this.beanParamAdditionalHeader = beanParamAdditionalHeader;
     }
 }
