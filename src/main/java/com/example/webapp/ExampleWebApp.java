@@ -15,7 +15,11 @@ public class ExampleWebApp extends Application {
 
     @Override
     public Set<Class<?>> getClasses() {
-        return new HashSet<>(Arrays.asList(ExampleResource.class, OpenApiResource.class, AcceptHeaderOpenApiResource.class));
+        return new HashSet<>(Arrays.asList(
+                ExampleResource.class,
+                OpenApiResource.class,
+                AcceptHeaderOpenApiResource.class
+        ));
     }
 
 }

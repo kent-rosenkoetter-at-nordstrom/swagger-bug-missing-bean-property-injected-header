@@ -8,9 +8,11 @@ public class HeaderResult {
     private String resourceConstructorHeader;
     private String resourceFieldHeader;
     private String resourcePropertyHeader;
+    private String resourceAdditionalHeader;
     private String beanParamConstructorHeader;
     private String beanParamFieldHeader;
     private String beanParamPropertyHeader;
+    private String beanParamAdditionalHeader;
 
     public String getResourceConstructorHeader() {
         return resourceConstructorHeader;
@@ -34,6 +36,14 @@ public class HeaderResult {
 
     public void setResourcePropertyHeader(final String resourcePropertyHeader) {
         this.resourcePropertyHeader = resourcePropertyHeader;
+    }
+
+    public String getResourceAdditionalHeader() {
+        return resourceAdditionalHeader;
+    }
+
+    public void setResourceAdditionalHeader(String resourceAdditionalHeader) {
+        this.resourceAdditionalHeader = resourceAdditionalHeader;
     }
 
     public String getBeanParamConstructorHeader() {
@@ -60,4 +70,11 @@ public class HeaderResult {
         this.beanParamPropertyHeader = beanParamPropertyHeader;
     }
 
+    public String getBeanParamAdditionalHeader() {
+        return beanParamAdditionalHeader;
+    }
+
+    public void setBeanParamAdditionalHeader(String beanParamAdditionalHeader) {
+        this.beanParamAdditionalHeader = beanParamAdditionalHeader;
+    }
 }

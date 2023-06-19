@@ -14,14 +14,21 @@ public class ExampleResource {
 
     private String propertyHeader;
 
+    private String additionalHeader;
+
     public ExampleResource(@HeaderParam("Resource-Constructor-Header") final String constructorHeader) {
         super();
         this.constructorHeader = constructorHeader;
     }
 
     @HeaderParam("Resource-Property-Header")
-    public void addHeader(final String header) {
+    public void setPropertyHeader(final String header) {
         this.propertyHeader = header;
+    }
+
+    @HeaderParam("Resource-Additional-Header")
+    public void addAdditionalHeader(final String header) {
+        this.additionalHeader = header;
     }
 
     @GET
@@ -33,9 +40,11 @@ public class ExampleResource {
         headerResult.setResourceConstructorHeader(constructorHeader);
         headerResult.setResourceFieldHeader(fieldHeader);
         headerResult.setResourcePropertyHeader(propertyHeader);
+        headerResult.setResourceAdditionalHeader(additionalHeader);
         headerResult.setBeanParamConstructorHeader(beanParam.getConstructorHeader());
         headerResult.setBeanParamFieldHeader(beanParam.getFieldHeader());
         headerResult.setBeanParamPropertyHeader(beanParam.getPropertyHeader());
+        headerResult.setBeanParamAdditionalHeader(beanParam.getAdditionalHeader());
         return Response.ok(headerResult).build();
     }
 

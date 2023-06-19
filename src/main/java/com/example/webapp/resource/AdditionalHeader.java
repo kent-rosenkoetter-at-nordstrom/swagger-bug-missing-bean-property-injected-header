@@ -12,6 +12,8 @@ public class AdditionalHeader {
 
     private String propertyHeader;
 
+    private String additionalHeader;
+
     @Inject
     public AdditionalHeader(@HeaderParam("BeanParam-Constructor-Header") final String constructorHeader) {
         this.constructorHeader = constructorHeader;
@@ -25,13 +27,22 @@ public class AdditionalHeader {
         return fieldHeader;
     }
 
+    public String getPropertyHeader() {
+        return propertyHeader;
+    }
+
     @HeaderParam("BeanParam-Property-Header")
-    public void addHeader(final String header) {
+    public void setPropertyHeader(final String header) {
         this.propertyHeader = header;
     }
 
-    public String getPropertyHeader() {
-        return propertyHeader;
+    public String getAdditionalHeader() {
+        return additionalHeader;
+    }
+
+    @HeaderParam("BeanParam-Additional-Header")
+    public void addAdditionalHeader(final String header) {
+        this.additionalHeader = header;
     }
 
 }
